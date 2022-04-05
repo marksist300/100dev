@@ -1,0 +1,52 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.page-setup {
+    background-color: lightblue;
+    border: rgb(23, 173, 15) 5px solid;
+    width: 650px;
+    height: 720px;
+    color: white;
+    padding: 2.5em;
+    margin: 1em auto;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+.sub-title-heading {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.pipe {
+    color: darkgray;
+}
+
+.logo-img {
+    width: 30%;
+    height: 50%;
+    margin: 1em;
+    float: right;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+a {
+    color: rgb(23, 173, 15);
+}
+
+footer {
+    text-align: center;
+}
+
+ul li{
+    list-style-type: none;
+    display: inline;
+}
