@@ -1,0 +1,73 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* <li>Please give the h1 some padding on three sides, margin on just one side, and a light purple background with light blue lettering</li>
+<li>Please give the h2 significant padding on the top and bottom, a dark green border on the top and bottom, and an orange background</li>
+<li>Please give the section a thick blue border, height of 300px, and more the 400px of margin on the top</li>
+<li>Please make the spans have thin yellow borders and equal padding / margin on all sides</li> */
+
+h1 {
+    padding: 5px 5px 5px 0px;
+    margin-left: 5px;
+    background-color: rgb(144, 43, 144);
+    color: lightblue;
+}
+
+h2 {
+    padding: 15px 0px 15px 0px;
+    border-top: 2px solid darkgreen;
+    border-bottom: 2px solid darkgreen;
+    background-color: orange;
+}
+
+section {
+    border: 10px solid blue;
+    height: 300px;
+    margin-top: 400px;
+}
+
+span {
+    border: 1px solid yellow;
+    padding: 2px;
+    margin: 2px;
+}
