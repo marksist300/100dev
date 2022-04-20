@@ -1,0 +1,200 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 62.5%;
+	font: inherit;
+	vertical-align: baseline;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*Header and Nav: top*/
+nav{
+    display: inline-block;
+    width: 100%;
+    height: 5%;
+    background-color: black;
+}
+
+
+nav .nav-link{
+    color: white;
+    float: left;
+    padding: .5rem 2.3rem 0rem 2.3rem;
+    line-height: 1.5rem;
+    border-right: 1px solid white;
+}
+
+/*BBC Logo*/
+.BBC-logo img{
+    max-width: 3rem;
+    float: left;
+    transform: translateY(-.2rem)
+}
+
+
+
+/* menu selection underline on hover*/
+.category-underline:hover {
+    border-bottom: 7px solid white;
+}
+
+/*scroll down menu: More*/
+
+/*Search bar*/
+
+nav .search-bar {
+    display: inherit;
+    padding-top: .4rem;
+    margin-left: 1rem;
+    margin-bottom: 0;
+}
+
+button .fa-search, .search-button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    margin-left: -1.001rem;
+}
+
+.dropbtn {
+    font-size: inherit;
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+
+.dropdown-items ul{
+    display: none;
+
+}
+
+
+/*Main section*/
+main {
+    height: 30%;
+    padding: .4rem;
+}
+
+/*Headline article: left side*/
+.headline-article {
+    width: 49.5%;
+    float: left;
+
+}
+
+.headline-article, img {
+    position: relative;
+    max-width: 100%;
+}
+
+.headline-article .photo-text-wrap{
+    position: absolute;
+    transform: translateY(-4.5rem);
+    padding: .2rem .2rem 1rem .8rem;
+}
+
+.photo-text-wrap h2 {
+    color: white;
+    padding-bottom: .2rem;
+}
+
+.photo-text-wrap p, span {
+    color: rgb(188, 187, 187);
+}
+
+
+
+/*Tile articles: right side*/
+.tile-articles {
+    float:right;
+    width:49.5%;
+}
+
+.tile-story{
+    width: 49%;
+    float:left;
+    margin: .2%;
+    position:relative;
+
+}
+
+.tile-story .photo-text-wrap {
+    position: absolute;
+    transform: translateY(-4rem);
+    padding: .2rem .2rem 1rem .8rem;
+}
+
+
+
+/*   sub heading news-section*/
+
+.news-section {
+    clear: both;
+    padding: .4rem;
+}
+.news-section-header{
+    font-size: 1.2rem;
+    padding: 1rem 0 1rem .4rem;
+}
+.article-block {
+    width: 32%;
+    float: left;
+}
+
+.article-block a, img{
+    width: 99%;
+    padding: .2rem;
+}
+
+.news-sub-img-text{
+    padding: .2rem .4rem .4rem .4rem;
+}
+
+.news-sub-img-text span {
+    margin: .3rem;
+}
+/*text set up */
+
+.red-pipe-category {
+    color: red;
+    font-style: normal;
+}
