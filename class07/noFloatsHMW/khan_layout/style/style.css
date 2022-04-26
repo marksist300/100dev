@@ -1,0 +1,188 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 62.5%;
+	font: inherit;
+	vertical-align: baseline;
+    box-sizing: border-box;
+    text-decoration: none;
+	font-family: 'Playfair Display', sans-serif;
+
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+header {
+	display: inline-block;
+	width: 100%;
+	border: 1px solid rgb(177, 176, 176);
+	padding: 1rem;
+	justify-content: center;
+}
+
+nav >*{
+	float: left;
+	margin-right: 2rem;
+}
+
+nav ul {
+	width: 20%;
+	margin-left: 15%;
+
+}
+
+
+nav ul >li{
+	float: right;
+	display: inline;
+	margin-right: 2rem;
+
+}
+
+nav a {
+	color: #1865f2;
+	font-size: 1rem;
+	font-weight: 700;
+	font-family: sans-serif;
+	padding-left: .5rem;
+}
+
+form {
+}
+/*Search-bar and submit button.*/
+form > input {
+	border-radius: 3%;
+	border: none;
+	background-color: rgba(179, 177, 177, 0.189);
+	height: 2.5rem;
+	width: 12rem;
+	margin-top: -1rem;
+	/* margin-right: .5rem; */
+}
+
+form >input:hover {
+	background: rgba(179, 177, 177, 0.477);
+	cursor: pointer;
+}
+
+.submit-button {
+	border: none;
+	outline: none;
+	background: transparent;
+	font-size: 1.2rem;
+}
+
+.fa-search {
+	transform: translateX(-2.2rem);
+	color: rgba(128, 128, 128, 0.655);
+	
+}
+
+
+input::placeholder {
+	color: #1865f2;
+	font-weight: bold;
+	padding-left: 5%;
+
+}
+
+/*Header Title*/
+
+.title-header{
+	margin-left: 15%;
+}
+
+.title-header a{
+	font-size: 1.3rem;
+	color:#005987;
+}
+
+.title-header a:hover{
+	color:#1865f2;
+}
+
+.main-image-section {
+	float: left;
+	width: 50%;
+	height: 50%;
+}
+.main-image-section img {
+	width:100%;
+}
+
+.main-text-section {
+	float:right;
+	width: 50%;
+	height: 50%;
+	padding: 4rem 5rem 2rem 1rem;
+}
+
+.main-text-section >h1 {
+	font-size: 4rem;
+	font-weight: 500;
+	line-height: 5rem;
+}
+.main-text-section >p {
+	font-size: 1rem;
+	font-weight: 500;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	line-height: 2rem;
+}
+
+section > ul {
+	width: 100%;
+}
+
+section > ul > li {
+	display: inline;
+	margin: 0 2rem;
+}
+
+/* Button Setup Right-section*/
+.right-side-buttons li{
+	float: left;
+	margin: .3rem;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	background-color: #1865f2;
+	padding: .8rem 1.2rem;
+}
+
+.right-side-buttons li>a{
+	font-family: sans-serif;
+	color: #fff;
+}
