@@ -1,0 +1,204 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 62.5%;
+	font: inherit;
+	vertical-align: baseline;
+    box-sizing: border-box;
+    text-decoration: none;
+	font-family: 'Helvetica Neue', Helvetica, sans-serif, Arial;
+
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Nav set-up*/
+nav, main, aside{
+    float: left;
+}
+
+nav {
+	background-color: #fff;
+	position:fixed;
+    width: 15%;
+	height: 100%;
+	padding: .8rem;
+}
+
+.nav-item {
+	display:inline-block;
+	color: #777;
+	padding: .5rem;
+}
+
+.logo{
+	width: 50%;
+}
+
+.join-TC-plus{
+	color: #fdc006;
+	font-size: 1.15rem;
+	font-weight: 500;
+	padding-left: 1rem;
+}
+
+.join-TC-plus:hover {
+	color:#dca946;
+}
+
+.login{
+	width: 100%;
+	padding-left: 1rem;
+	padding-bottom: 2rem;
+}
+
+.search-toggle-bar{
+	display:inline-block;
+	padding-left: 1rem;
+	padding-bottom: 0;
+	color: #777;
+}
+
+.list-text{
+	font-weight: 300;
+	font-size: 1.1rem;
+}
+
+.login:hover, .list-text:hover  {
+	color: #00a562;
+}
+
+/* page layout: main and aside sizing*/
+main {
+    width: 41%;
+	margin-left: 15%;
+}
+
+aside {
+    width:25%;
+}
+
+
+/* font sizing, text settings*/
+
+/* Main image and text*/
+h1 {
+	font-size: 2.5rem;
+	font-weight: bold;
+}
+
+main img{
+	width: 100%;
+	padding: .4rem;
+}
+
+main:hover img{
+	opacity: 0.85;
+	transition: .3s;
+}
+
+main:hover h1 {
+	color: rgba(0, 0, 0, 0.684);
+	transition: .3s;
+}
+main:hover span {
+	color: rgba(0, 0, 0, 0.684);
+	transition: .3s;
+}
+
+/* text setup  action on hover for articles*/
+.top-text {
+	padding: .8rem;
+	color: black;
+}
+
+.side-aritcle{
+	padding: .5rem;
+	border-bottom: 1px solid rgba(119, 119, 119, 0.231);
+}
+
+.top-text +span {
+	font-weight: 450;
+	font-size: .9rem;
+}
+
+.side-heading {
+	font-size: 1.7rem;
+	font-weight: bold;
+}
+
+article:hover h2{
+	color: rgba(0, 0, 0, 0.684);
+	transition: .3s;
+}
+
+article:hover span{
+	color: rgba(0, 0, 0, 0.684);
+	transition: .3s;
+}
+
+.author:hover{
+	color: #00a562;
+	transition: .3s;
+}
+
+/* news feed section */
+.news-feed {
+	margin-left: 15%;
+	margin-top: 2rem;
+	display: inline-block;
+	width: 66%;
+}
+
+.news-feed-story, .title-above-news-feed {
+	border-bottom: 2px solid rgba(119, 119, 119, 0.231);
+	padding: 1.5rem 0 1.5rem 0;
+}
+.news-feed-story{
+	float: left;
+	clear: both;
+}
+
+
+.news-feed-image {
+	max-width: 300px;
+}
+
+.news-feed-heading-left,.news-feed-text,.news-feed-image{
+	float: left;
+	width:32%;
+}
