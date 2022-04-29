@@ -48,9 +48,7 @@ header, main {
 	background-color: rgba(30, 60, 89, 0.783);
 }
 
-*{
-	width: 100%;
-}
+
 /*Nav and nav item setup*/
 nav {
 	display: inline-block;
@@ -65,6 +63,7 @@ nav {
 	top: 1rem;
 }
 
+
 .nav-item:nth-child(1) {
 	float: left;
 	margin-left: 1.4%;
@@ -76,7 +75,8 @@ nav {
 
 .nav-item:nth-child(3) {
 	float: center;
-	margin-left: 25%;
+	margin-left: 30%;
+	width: 2rem;
 }
 
 .nav-item:nth-child(4) {
@@ -87,7 +87,7 @@ nav {
 /*Main*/
 main{
 	width: 100%;
-	padding: 4rem 1rem;
+	/* padding: 4rem 1rem; */
 	text-align: center;
 
 }
@@ -100,6 +100,13 @@ main * {
 	width: 50%;
 	color: #fff;
 }
+
+.fa-play-circle-o{
+	width: .5rem;
+	font-weight: thin;
+	color: #fff;
+}
+
 h1 {
 	font-size: 3rem;
 }
@@ -107,6 +114,22 @@ h1 {
 .title-text {
 	font-size: 1.2rem;
 }
+
+
+/* settings for section headers generally (1st and 2nd section)*/
+.section-heading{
+	font-weight: 700;
+	font-size: 1.4rem;
+	padding-bottom: 0;
+}
+
+/* Buttons*/
+.btn{
+	display: inline-block;
+	border: 1px solid rgb(18, 36, 54);
+	padding: 1rem  2rem;
+}
+
 
 /*First Section*/
 
@@ -118,11 +141,6 @@ h1 {
 	margin: auto;
 	width: 40%;
 	padding: 1rem;
-}
-.section-heading{
-	font-weight: 700;
-	font-size: 1.2rem;
-	padding-bottom: 0;
 }
 
 /*Second Section */
@@ -191,10 +209,48 @@ h1 {
 .third-section-volunteer{
 	text-align: center;
 	margin: 3% auto;
+	width: 100%;
+	padding: 1rem;
+}
+
+.third-section-volunteer >h2{
+	text-align: center;
+	margin: auto;
 	width: 50%;
 	padding: 1rem;
 }
 
-.third-section-volunteer>h3 {
+.third-section-volunteer >p{
+	text-align: center;
+	margin: auto;
+	width: 50%;
+	padding: 1rem;
+}
 
+
+
+/*Footer styling*/
+
+footer{
+	background-color:rgb(18, 36, 54);
+	width: 100%;
+	overflow: hidden;
+}
+
+footer * {
+	color: #fff;
+}
+
+hr{
+	width: 95%;
+}
+
+.sub-footer{
+	display: inline-block;
+	padding: 0 2rem;
+}
+
+.logo-bottom{
+	float: right;
+	width: 2rem;
 }
