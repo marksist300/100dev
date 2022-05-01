@@ -5,34 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&family=Yeseva+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Restaurant Clone</title>
 </head>
 <body>
+    <div class="main-background">
     <nav>
-        <img class="logo"/>
+        <img class="logo" href="#" alt="Restuarant logo"/>
         <ul>
-            <li><a class="nav-item">Home</a></li>
-            <li><a class="nav-item">About Us</a></li>
-            <li><a class="nav-item">Menu</a></li>
-            <li><a class="nav-item">Order Now</a></li>
-            <li><a class="nav-item">Blog</a></li>
-            <li><a class="nav-item">Location</a></li>
-            <li><a class="nav-item shopping-cart"></a></li>
-            <li><a class="nav-item nav-search"></a></li>
+            <li><a class="nav-item" href="#">Home</a></li>
+            <li><a class="nav-item" href="#">About Us</a></li>
+            <li><a class="nav-item" href="#">Menu</a></li>
+            <li><a class="nav-item" href="#">Order Now</a></li>
+            <li><a class="nav-item" href="#">Blog</a></li>
+            <li><a class="nav-item" href="#">Location</a></li>
+            <li><a class="nav-item shopping-cart" href="#"></a></li>
+            <li><a class="nav-item nav-search" href="#"></a></li>
         </ul>
     </nav>
 
-    <section class="main-section"></section>
-        <h1>Welcome To Our Cuisine Restuarant</h1>
-        <form><input type="search" placeholder="Search here" name="query"></form>
-        <button class="btn location-button">Location</button>
-
+    <section class="main-section">
+        <h1>Welcome To Our Cuisine Restaurant</h1>
+        <form class="form-main">
+        <input class="search-form" type="search" placeholder="Search here" name="search">
+        <button type="submit" class="btn location-button">Location <i class="fa fa-caret-down"></i></button>
+         </form>
         <ul class="social-media-links">
-            <li><a class="facebook"></a></li>
-            <li><a class="twitter"></a></li>
-            <li><a class="instagram"></a></li>
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i> 252K</a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i> 62K</a></li>
+            <li><a class="instagram" href="#"><i class="fa fa-instagram"></i> 55K</a></li>
         </ul>
-    <section class="about-section" id="about-us"></section>
+    </section>
+    </div>
+    <section class="about-section" id="about-us">
         <span class="section-description-text">About us</span>
 
         <h2>Discover Our Restauant Story</h2>
@@ -40,13 +48,13 @@
 
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae deserunt ipsum ab facilis iste nostrum?</p>
 
-        <button class="btn menu">Discover Menu</button>
-
-    <section class="speciality-section"></section>
-        <span class="section-description">Order Online Now</span>
+        <button class="btn menu"><a href="#">Discover Menu</a></button>
+    </section>
+    <section class="speciality-section">
+        <span class="section-description-text">Order Online Now</span>
         <h2>Our Speciality Cuisine</h2>
 
-        <ul>
+        <ul class="speciality-list">
             <li><a class="speciality-selector">Breakfast</a></li>
             <li><a class="speciality-selector">Lunch</a></li>
             <li><a class="speciality-selector">Dinner</a></li>
@@ -55,26 +63,26 @@
         </ul>
 
         <div class="speciality-photos-block">
-        <img class="speciality-photo" href="#"/>
+        <img class="speciality-photo" src="source/image-1.jpg"/>
 
-        <img class="speciality-photo" href="#"/>
+        <img class="speciality-photo" src="source/image-2.jpg"/>
 
-        <img class="speciality-photo" href="#"/>
+        <img class="speciality-photo" src="source/image-3.jpg"/>
 
-        <img class="speciality-photo" href="#"/>
+        <img class="speciality-photo" src="source/image-4.jpg"/>
 
-        <img class="speciality-photo" href="#"/>
+        <img class="speciality-photo" src="source/image-5.jpg"/>
 
-        <img class="speciality-photo" href="#"/>
+        <img class="speciality-photo" src="source/image-6.jpg"/>
 
-        <img class="speciality-photo" href="#"/>
+        <img class="speciality-photo" src="source/image-7.jpg"/>
 
-        <img class="speciality-photo" href="#"/>
+        <img class="speciality-photo" src="source/image-8.jpg"/>
 
         </div>
-
+    </section>
     <section class="address-details-section">
-        <span class="section-description">Boot Table</span>
+        <span class="section-description-text">Boot Table</span>
 
         <h2>Opening Hours</h2>
 

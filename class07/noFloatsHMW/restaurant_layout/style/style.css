@@ -14,10 +14,13 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
     text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+	color: #000;
+	box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -41,4 +44,213 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+/*generic rules for elements throughout doc*/
+.btn{
+	background-color: rgb(255, 166, 0);
+	border: rgb(255, 166, 0);
+	padding: .5rem;
+	border-radius: 2px;
+	color: #fff;
+}
+
+.btn a{
+	color: #fff;
+}
+.section-description-text{
+	color:rgb(255, 166, 0);
+}
+
+/*Heading fonts*/
+h1, h2 {
+	font-family: 'Yeseva One', cursive;
+}
+
+h1{
+	font-size: 4rem;
+	padding-right:15%;
+	padding-bottom: 1.5rem;
+	width: 45%;
+}
+
+h2{
+	font-size:2.5rem;
+}
+/*Nav setup*/
+nav {
+	width: 100%;
+	min-height: 5%;
+	margin-bottom: 1rem;
+	padding: .5rem;
+}
+nav * {
+	display: inline;
+}
+
+nav ul{
+	float:right;
+	width: 35%;
+}
+.nav-item{
+	float:left;
+	padding-right: 2%;
+}
+
+/*Main background image setting*/
+.main-background{
+	width: 100%;
+	background-image: url(../source/main-background.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+/*form and link elements of main section*/
+
+.social-media-links{
+	display:inline-block;
+	width: 100%;
+}
+.social-media-links li{
+	display: inline-block;
+	padding: 1rem 2.5rem 0 0;
+}
+
+.social-media-links i {
+	color: rgb(255, 166, 0);
+	font-size: 1.1rem;
+} 
+.main-section{
+	width: 100%;
+	padding: 5%;
+}
+
+/* .form-main *{
+	display: inline;
+}
+
+.location-button{
+	position: relative;
+	right: .34%;
+	transform: translateY(5%);
+	border: 1px solid rgba(187, 185, 185, 0.542);
+	border-top-left-radius: none;
+	border-bottom-left-radius: none;
+	height: 2rem;
+} */
+/* .search-form{
+	width: 20%;
+	height: 2rem;
+	border: 1px solid rgba(187, 185, 185, 0.542);
+} */
+
+.form-main {
+	display: inline;
+}
+
+.form-main * {
+	height: 2rem;
+}
+
+.search-form{
+	width: 30%;
+	padding: .5rem;
+	float:left;
+	border: .5px solid rgba(183, 182, 182, 0.388);
+	border-radius: 3% 0 0 3%;
+}
+
+.location-button{
+	padding: .5rem;
+	float:left;
+	border: .5px solid rgba(183, 182, 182, 0.388);
+	border-radius: 0 3% 3% 0;
+}
+
+.fa-caret-down{
+	color: white;
+}
+
+/* about section: secton 2*/
+
+.about-section{
+	background-image: url(../source/about-us-1.jpg), url(../source/about-us-2.jpg);
+	background-repeat: no-repeat, no-repeat;
+	background-position: -30% center, 100% bottom;
+	background-size: 50%, 25%;
+	width: 100%;
+	margin: auto;
+	padding: 5%;
+	text-align:left;
+	clear:both;
+	opacity: .7;
+}
+
+/* .about-section *{
+	position: relative;
+	left: 32%;
+} */
+.about-section *{
+	opacity: 1;
+}
+.about-section h2{
+	position: relative;
+	left: 32%;
+	padding-bottom: 1.5rem;
+	width: 50%;
+}
+
+.about-section span{
+	position: relative;
+	left: 32%;
+	padding-bottom: 1.5rem;
+	width: 50%;
+}
+
+.about-section p{
+	position: relative;
+	left: 32%;
+	padding-bottom: 1.5rem;
+	width: 50%;
+	line-height: 130%;
+}
+
+.about-section .btn{
+	position: relative;
+	left: 32%;
+}
+
+
+/*section 3*/ 
+
+.speciality-section {
+	text-align: center;
+	padding: 2rem;
+}
+
+.speciality-section *{
+	padding:.4rem;
+}
+
+.speciality-list li{
+	display: inline-block;
+	border-bottom: 1px solid rgba(195, 195, 195, 0.85);
+	padding-bottom: 1rem;
+}
+
+.speciality-photos-block{
+	width: 80%;
+	margin: auto;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+.speciality-photo{
+	width: 23%;
+	aspect-ratio: 1/1.3;
+	float: left;
+}
+
+.address-details-section{
+	clear: both;
 }
