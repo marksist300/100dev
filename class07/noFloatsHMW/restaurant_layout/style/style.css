@@ -46,6 +46,10 @@ table {
 	border-spacing: 0;
 }
 
+body{
+	width:auto;
+}
+
 /*generic rules for elements throughout doc*/
 .btn{
 	background-color: rgb(255, 166, 0);
@@ -71,6 +75,7 @@ h1{
 	font-size: 4rem;
 	padding-right:15%;
 	padding-bottom: 1.5rem;
+	padding-top: 10%;
 	width: 45%;
 }
 
@@ -94,14 +99,14 @@ nav ul{
 }
 .nav-item{
 	float:left;
-	padding-right: 2%;
+	padding-right: 6%;
 }
 
 /*Main background image setting*/
 .main-background{
-	width: 100%;
 	background-image: url(../source/main-background.jpg);
 	background-size: 100%;
+	aspect-ratio: 16/9;
 	background-repeat: no-repeat;
 }
 
@@ -116,7 +121,7 @@ nav ul{
 	padding: 1rem 2.5rem 0 0;
 }
 
-.social-media-links i {
+i {
 	color: rgb(255, 166, 0);
 	font-size: 1.1rem;
 } 
@@ -124,25 +129,6 @@ nav ul{
 	width: 100%;
 	padding: 5%;
 }
-
-/* .form-main *{
-	display: inline;
-}
-
-.location-button{
-	position: relative;
-	right: .34%;
-	transform: translateY(5%);
-	border: 1px solid rgba(187, 185, 185, 0.542);
-	border-top-left-radius: none;
-	border-bottom-left-radius: none;
-	height: 2rem;
-} */
-/* .search-form{
-	width: 20%;
-	height: 2rem;
-	border: 1px solid rgba(187, 185, 185, 0.542);
-} */
 
 .form-main {
 	display: inline;
@@ -171,25 +157,20 @@ nav ul{
 	color: white;
 }
 
-/* about section: secton 2*/
-
 .about-section{
 	background-image: url(../source/about-us-1.jpg), url(../source/about-us-2.jpg);
 	background-repeat: no-repeat, no-repeat;
 	background-position: -30% center, 100% bottom;
 	background-size: 50%, 25%;
+	background-color: rgba(228, 230, 229, 0.437);
 	width: 100%;
-	margin: auto;
 	padding: 5%;
 	text-align:left;
 	clear:both;
-	opacity: .7;
+	z-index: 1;
+
 }
 
-/* .about-section *{
-	position: relative;
-	left: 32%;
-} */
 .about-section *{
 	opacity: 1;
 }
@@ -226,6 +207,8 @@ nav ul{
 .speciality-section {
 	text-align: center;
 	padding: 2rem;
+	background-color: rgba(241	245	246);
+	background-size:cover;
 }
 
 .speciality-section *{
@@ -251,6 +234,132 @@ nav ul{
 	float: left;
 }
 
+.speciality-section{
+	overflow:hidden;
+}
+
+/*restaurant info/details section*/
+
 .address-details-section{
+	background-image: url(../source/restaurant-info-background.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+	padding: 2.5rem;
+}
+
+.address-details-section h2{
+	padding: 1rem 0 2rem 0;
+}
+
+.fa-mobile-screen-button{
+	padding-bottom: 1rem;
+	font-size: 2rem;
+}
+
+.restaurant-number{
+	display:inline-block;
+	color:rgb(255, 166, 0);
+	font-size: 1.4rem;
+	padding: 1rem 0rem;
+	clear:both;
+}
+
+.restaurant-times{
+	display: inline-block;
+	margin: auto;
+	width: 70%;
+}
+
+.restaurant-times-left{
+	float: left;
+	width: 25%;
+	padding: 1rem;
+}
+
+.restaurant-times-right{
+	float:right;
+	width: 23%;
+	padding: 1rem;
+}
+
+.restaurant-days {
+	display: inline-block;
+	width: 70%;
+	margin-bottom: 1rem;
+}
+
+.open-times{
+	display: inline-block;
+	font-weight: 700;
+	font-size: 1.3rem;
 	clear: both;
+}
+
+.restaurant-video{
+	position: relative;
+	width: 48%;
+	margin: auto;
+	margin-bottom: 3rem;
+}
+
+.video-place-holder img{
+	display: block;
+}
+
+.restaurant-video .fa-circle-play{
+	font-size: 4rem;
+	position: absolute;
+	left: 18.5rem;
+	bottom: 11rem;
+}
+
+@media screen and (max-width:900px) {
+	.restaurant-video img{
+		width: 300px;
+	}
+	.restaurant-video .fa-circle-play{
+		font-size: 2rem;
+		position: absolute;
+		left: 8rem;
+		bottom:5rem;
+	}
+}
+/*Testimonial section*/
+
+.testimonial-section{
+	margin-top: 2rem;
+	text-align: center;
+	background-image: url(../source/quotations.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.testimonial-section h2{
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+}
+
+.testimonial-pic{
+	margin: auto;
+	display: block;
+	border-radius: 50%;
+}
+
+.testimonial-name{
+	font-weight: 700;
+	display: block;
+	margin: .5rem;
+}
+
+.testimonial-occupation{
+	font-weight:300;
+}
+
+.testimonial-section blockquote {
+	padding: 2rem 1.5rem 2rem 1.5rem;
+	width: 70%;
+	margin: auto;
+	font-weight:300;
+	font-style: italic;
 }
