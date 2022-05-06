@@ -1,0 +1,317 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 62.5%;
+	font: inherit;
+	vertical-align: baseline;
+    text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+	color: rgba(18 50 86);
+}
+
+*{
+	box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    width: auto;
+}
+ol, ul {
+	list-style-type: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.clear {
+   clear: both;
+}
+
+/*Project organised: Mobile First design*/
+
+/*General rules: btns etc.*/
+.btn {
+	background-color: rgba(18 50 86);
+	border: none;
+	border-radius: 5px;
+	color: white;
+	padding: .5rem;
+	cursor: pointer;
+	font-weight: 700;
+} 
+
+p, a{
+	color: rgba(18, 50, 86, 0.793);
+}
+
+/*Nav setup*/
+nav > ul {
+	display: none;
+}
+
+.nav-button {
+	display: none;
+}
+
+header{
+	width: 100%;
+}
+
+nav{
+	padding-bottom: 1.4rem;
+	padding: 1.2rem 1.2rem 2rem 1.2rem;
+	border-bottom: 1px solid rgba(18 50 86);
+}
+
+nav * {
+	display: inline-block;
+	float: left;
+	overflow: hidden;
+}
+
+.hamburger-menu{
+	padding-left: 1rem;
+	font-size: 1.4rem;
+	cursor: pointer;
+}
+
+nav > h2{
+	position: relative;
+	left: 15%;
+	font-size: 1.4rem;
+	font-weight: 700;
+	text-align: center;
+}
+
+/*Main setup, general rule for sections*/
+
+main, section{
+	width: 100;
+	margin:auto;
+	padding: 0 1rem;
+	text-align: justify;
+}
+
+
+/*form setup*/
+
+form input{
+	display: inline-block;
+	width: 100%;
+	margin: auto;
+}
+
+.search-bar{
+	width: 100%;
+	border: none;
+	border-radius: 5px;
+	padding: .5rem;
+	margin: auto;
+	margin-bottom: .5rem;
+	background-color: rgba(226	233	239);
+}
+
+.search-bar::placeholder{
+	color: rgba(112, 111, 111, 0.941)
+}
+
+
+/*Main setup*/
+
+.tagline{
+	display: block;
+	padding-top: 1.2rem;
+	padding-bottom: 1.2rem;
+}
+
+.tagline{
+	color: rgba(112, 111, 111, 0.941)
+}
+
+main > h1{
+	width: 90%;
+	font-size: 2rem;
+	font-weight: 700;
+	padding: 0 1.5rem 1.5rem 0;
+	text-align: left;
+}
+
+main >p{
+	padding-top: 1.2rem;
+}
+
+
+/*Section set-up*/
+
+section * {
+	padding-top: 1rem;
+}
+
+section img {
+	width: 100%;
+}
+
+section h3{
+	font-weight: 700;
+}
+
+section p{
+}
+
+section a{
+	padding-top: .3rem;
+	padding-bottom: 1.2rem;
+	display: block;
+}
+
+.image-section{
+	background-color: rgba(246 249 252);
+	margin: 1rem 0;
+}
+
+.fa-angle-right{
+	font-size: .7rem;
+}
+
+/*Media queries*/
+@media screen and (min-width:780px) {
+/*Nav changes for full screen*/
+	nav {
+		border: none;
+		padding-top: .5rem;
+		background-color: rgba(246 249 252);
+	}
+
+	nav >ul {
+		display: inline;
+		float: left;
+		margin-left: 22%;
+	}
+	
+	nav * {
+		display: inline-block;
+		float: left;
+	}
+	
+	.hamburger-menu::before{
+		display: none;
+	}
+	
+	nav > h2{
+		position:static;
+		display: inline-block;
+		float: left;
+		padding-right:1.2rem;
+	}
+
+	.nav-item {
+		padding-right: 2rem;
+	}
+
+	.nav-button {
+		display: inline-block;
+		float: right;
+	}
+
+	/*Main and image changes*/
+
+	main, section, .feature-section {
+		padding-left: 2rem;
+		background-color: rgba(246 249 252);
+	}
+	main {
+		width: 49%;
+		float: left;
+	}
+	.image-section{
+		width: 49%;
+		float: left;
+	}
+
+	form {
+		width: 100%;
+		overflow: hidden;
+	}
+	form *{
+		display:inline-block;
+		margin: 0;
+		padding: 0;
+	}
+
+	.search-bar{
+		width:60%;
+		float: left;
+		clear: both;
+		border-radius: 2px 0 0 2px;
+		border: none;
+	}
+
+	.search-btn{
+		float: left;
+		width:4rem;
+		margin: 0;
+		padding: .5rem;
+		border-radius: 0px 2px 2px 0;
+		border: none;
+	}
+
+	.feature-section {
+		padding: 2rem;
+	}
+	.feature-section:after{
+		content: ".";
+		display: block;
+		clear: both;
+		visibility: hidden;
+		line-height: 0;
+		height: 0;
+	}
+
+	.feature-section > section{
+		width: 24%;
+		float: left;
+	}
+
+	.feature-section *, .bullet-point {
+		display: block;
+		padding-bottom: 1rem;
+	}
+
+}
