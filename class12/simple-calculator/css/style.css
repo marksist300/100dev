@@ -1,0 +1,94 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+  list-style-type: none;
+  font-family: 'Lato', Helvetica, sans-serif
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+	line-height: 1;
+  padding-top: 5%;
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+*{
+  box-sizing: border-box;
+  text-align: center;
+}
+
+h1{
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+p{
+  font-size: 1.2rem;
+  font-style: italic;
+  padding-top: .7rem;
+}
+
+.list-block, .output-container{
+  flex-direction: column;
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  align-content: flex-end;
+  padding: 4rem 4rem 0rem 4rem;
+}
+
+.list-block *{
+  padding: 1.5rem;
+  width: 10%;
+  border: 1px solid rgba(15 32 67);
+  background-color: rgba(140 56 78);
+  color: rgba(248, 184, 195, 0.873);
+}
+
+.output-container{
+  padding: 0;
+}
+
+.output-container > h2{
+  padding: 1.5rem;
+  width: 9.15%;
+  border: 5px solid rgba(15 32 67);
+  background-color: rgba(140 56 78);
+  color: rgba(248, 184, 195, 0.873);
+}
