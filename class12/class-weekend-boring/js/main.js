@@ -1,6 +1,6 @@
 document.querySelector('#confirmButton').addEventListener('click', dayCheck);
 
-// this function added for the last par tof the ternary operator to test its ability to make the syntax a little neater.
+// this function added for the last part of the ternary operator to test its ability to make the syntax /// a little neater.
   const textReturner = (param) => {
     return document.querySelector('#demoTextArea').innerHTML = param;
   }
