@@ -1,9 +1,15 @@
+// All written out multiple times, rather than just declaring variables, as I wanted to practice and repeat the syntax.
+
 document.querySelector('#confirmButton').addEventListener('click', dayCheck);
 
 // this function added for the last part of the ternary operator to test its ability to make the syntax /// a little neater.
   const textReturner = (param) => {
     return document.querySelector('#demoTextArea').innerHTML = param;
   }
+
+function removal() {
+  return document.querySelector('#confirmButton').remove();
+}
 
 function dayCheck() {
 
@@ -24,6 +30,7 @@ function classDay() {
  textReturner('Class Day!');
  document.querySelector('video').style.display = 'block';
  document.querySelector('.main-container').style.boxShadow = 'none';
+ document.querySelector('#confirmButton').remove();
 };
 
 // If day is a weekend the follow function is invoked:
@@ -34,6 +41,7 @@ function theWeekend(){
   document.querySelector('body').style.backgroundRepeat = 'no-repeat';
   document.querySelector('body').style.backgroundPositionX = '50%';
   document.querySelector('.main-container').style.boxShadow = 'none';
+  document.querySelector('#confirmButton').remove();
   if(document.querySelector('video').style.display == 'block') {
     document.querySelector('video').style.display = 'none'
   };
@@ -47,6 +55,7 @@ function boringDay() {
   document.querySelector('body').style.backgroundRepeat = 'no-repeat';
   document.querySelector('body').style.backgroundPositionX = '50%';
   document.querySelector('.main-container').style.boxShadow = 'none';
+  document.querySelector('#confirmButton').remove();
   if(document.querySelector('video').style.display == 'block') {
     document.querySelector('video').style.display = 'none'
   };
