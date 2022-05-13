@@ -71,3 +71,34 @@ h1 {
   margin: 1rem;
   flex-basis: 15%;
 }
+
+.panic{
+  color: #fff;
+  background-image: url('../img/panic.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 25%;
+}
+
+.sad{
+  color: #fff;
+  background-image: URL('../img/sad.jpg');
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: 0 20%;
+}
+
+.peace {
+  color: #fff;
+  background-image: URL('../img/peace.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.happy{
+  color: #fff;
+  background-image: URL('../img/smile.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 20%;
+}

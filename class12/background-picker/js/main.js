@@ -1,39 +1,34 @@
-document.getElementById('happy').onclick = happyBG
-document.getElementById('sad').onclick = sadBG
-document.getElementById('panic').onclick = panicBG
-document.getElementById('peace').onclick = peaceBG
+const body = document.querySelector('body');
 
-function happyBG(){
-  document.querySelector('body').style.color = '#fff'
-  document.querySelector('body').style.backgroundImage= "URL('/Users/mark/Downloads/class12-materials/background-picker/img/smile.jpg')"
-  document.querySelector('body').style.backgroundRepeat= 'no-repeat'
-  document.querySelector('body').style.backgroundSize= 'cover'
-  document.querySelector('body').style.backgroundPosition = '0 20%'
+document.querySelector('#happy').addEventListener('click', happyBG);
+document.querySelector('#sad').addEventListener('click', sadBG);
+document.querySelector('#panic').addEventListener('click', panicBG);
+document.querySelector('#peace').addEventListener('click', peaceBG);
+
+function happyBG() {
+  if(body.className !== 'happy') {
+    body.className = '';
+    body.classList.toggle('happy');
+  } else body.classList.toggle('happy');
 }
 
-function sadBG () {
-  document.querySelector('body').style.color = '#fff'
-  document.querySelector('body').style.backgroundImage = "URL('/Users/mark/Downloads/class12-materials/background-picker/img/sad.jpg')"
-  document.querySelector('body').style.backgroundRepeat = 'no-repeat'
-  document.querySelector('body').style.backgroundSize = 'cover'
-  document.querySelector('body').style.backgroundPosition = '0 20%'
-
+function sadBG() {
+  if(body.className !== 'sad' ) {
+    body.className = '';
+    body.classList.toggle('sad');
+  } else body.classList.toggle('sad');
 }
 
-function panicBG () {
-  document.querySelector('body').style.color = '#fff'
-  document.querySelector('body').style.backgroundImage = "URL('/Users/mark/Downloads/class12-materials/background-picker/img/panic.jpg')"
-  document.querySelector('body').style.backgroundRepeat = 'no-repeat'
-  document.querySelector('body').style.backgroundSize = 'cover'
-  document.querySelector('body').style.backgroundPosition = '0 25%'
-
+function panicBG() {
+  if(body.className !== 'panic') {
+    body.className = '';
+    body.classList.toggle('panic');
+  } else body.classList.toggle('panic');
 }
 
-function peaceBG (){
-  document.querySelector('body').style.color = '#fff'
-  document.querySelector('body').style.backgroundImage = "URL('./img/peace.jpg')"
-  document.querySelector('body').style.backgroundRepeat = 'no-repeat'
-  document.querySelector('body').style.backgroundSize = 'cover'
-  // document.querySelector('body').style.bac
-
+function peaceBG() {
+  if(body.className !== 'peace') {
+    body.className = ''
+    body.classList.toggle('peace')
+  } else body.classList.toggle('peace')
 }
