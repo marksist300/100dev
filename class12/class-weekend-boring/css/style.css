@@ -106,3 +106,17 @@ video {
   left: 0;
   z-index: -10;
 }
+
+.weekend{
+  background-image: URL(../img/weekend.jpg);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.boring{
+background-image: URL(../img/boring.jpg);
+background-size: 50%;
+background-repeat: no-repeat;
+background-position: top center;
+}
