@@ -1,13 +1,7 @@
-//enter a day of the week
-//receive the value
-//check value against regex
-// change the background image according to the day of the week
-//output text based on day of the week
-
-
 const confirmButton = document.querySelector('#confirmButton');
 const body = document.querySelector('body');
 const video = document.querySelector('video');
+const boxShadow = document.querySelector('.main-container').style
 
 function textReturner (param) {
   return document.querySelector('#demoTextArea').innerText = param;
@@ -33,19 +27,22 @@ function dayChecker(){
 function goClass(){
     textReturner('Class day!')
     video.style.display ='block';
-    confirmButton.remove()
+    boxShadow.boxShadow = 'none';
+    confirmButton.remove();
 }
 
 function goBoring() {
   textReturner('Boring day!')
   body.classList.toggle('boring')
-  confirmButton.remove()
+  boxShadow.boxShadow = 'none';
+  confirmButton.remove();
 }
 
 function goWeekend() {
   textReturner('Oh, yeah, the Weekend!')
-  body.className = 'weekend'
-  confirmButton.remove()
+  body.className = 'weekend';
+  boxShadow.boxShadow = 'none';
+  confirmButton.remove();
 }
 
 function noDay() {
