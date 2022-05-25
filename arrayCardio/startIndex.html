@@ -37,36 +37,38 @@
     
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's
-    const bornIn1500s = inventors.filter(person => (person.year >1500 && person.year<1600))
-    console.log(bornIn1500s)
+      const filteredInventors = inventors.filter(person=> person.year>1500 && person.year<1600);
+      console.table(filteredInventors);
 
     // Array.prototype.map()
     // 2. Give us an array of the inventors first and last names
-    const firstandLastName = inventors.map(person=> { 
+      const inventorNames =inventors.map(person=> {
         return `${person.first} ${person.last}`
-    },[])
+      }, []);
 
-    console.log(firstandLastName)
+      console.log(inventorNames);
 
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
-    const oldestToYoungest = inventors.sort((a,b) => a.year -b.year)
-    console.log(oldestToYoungest)
+      const oldestToYoungest = inventors.sort((a,b)=> a.year - b.year);
+
+      console.table(oldestToYoungest);
 
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live all together?
-    const totalTimeAlive = inventors.reduce((count, num)=> {
-        count += (num.passed-num.year);
-        return count;
-    }, 0)
+      const totalYearsLived = inventors.reduce((acc, curr)=> {
+        acc += curr.passed-curr.year;
+        return acc;
+      },0)
 
-      console.log(totalTimeAlive)
+      console.log(totalYearsLived)
+
 
     // 5. Sort the inventors by years lived
-    const lifeSpanRank = inventors.sort((a,b) => {
-      return (a.passed-a.year) -(b.passed-b.year)
-    });
-    console.log(lifeSpanRank);
+      const inventorsYearsAlive = inventors.sort((a,b) => {
+        return (a.passed-a.year) - (b.passed-b.year);
+      })
+      console.table(inventorsYearsAlive)
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
     // const classTags = document.querySelector('.mw-category-columns');
@@ -77,10 +79,15 @@
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
-    const peoplesNames = people.sort((lName, fName)=>{
-      const [aLName, aFName] = lName.split(', ');
-      const [bLName, bFName] = fName.split(', ')
-      return aLName > bLName? 1: -1;
+    // const peoplesNames = people.sort((lName, fName)=>{
+    //   const [aLName, aFName] = lName.split(', ');
+    //   const [bLName, bFName] = fName.split(', ')
+    //   return aLName > bLName? 1: -1;
+    // });
+    const peoplesNames = people.sort((firstItem, secondItem) => {
+        const [aLast, aFirst] = firstItem.split(', ');
+        const [bLast, bFirst] = secondItem.split(', ');
+        return  aLast > bLast? 1: -1;
     });
 
     console.log('here son!', peoplesNames)
@@ -90,10 +97,10 @@
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
-    const tallyData = data.reduce((tally, current) => {
-      tally[current] = (tally[current] || 0)+1;
+    tallyData = data.reduce((tally, datum) => {
+      tally[datum] = (tally[datum] || 0)+1;
       return tally
-    }, {})
+    }, {});
 
     console.log(tallyData)
   </script>
