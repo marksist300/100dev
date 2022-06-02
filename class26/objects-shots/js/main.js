@@ -80,7 +80,7 @@ buttons.forEach(btn => btn.addEventListener('click', e =>
     {
         if(e.target.classList.contains('select-btn')) {
             const btnId = e.target.id;
-            if (input.value == '') return noInput();
+            if (input.value == '') return cocktailList.noInput();
             else if(btnId === 'submit-btn'){
                 cocktailList.fetcher(input.value);
             } else if(btnId === 'submit-btn' && cocktailList.drinkSearchActive === true){
