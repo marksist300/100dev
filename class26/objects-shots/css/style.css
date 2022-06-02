@@ -16,6 +16,17 @@ img{
   max-height: 25rem;
 }
 
+input:focus{
+  outline: none;
+}
+
+input::placeholder{
+  color: rgb(137, 135, 135);
+}
+
+.warning::placeholder{
+  color: red;
+}
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
