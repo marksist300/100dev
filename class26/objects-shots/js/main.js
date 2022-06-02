@@ -11,6 +11,7 @@ class CocktailList {
 
     }
     reset() {
+        console.log('reset done')
         this.index = 0;
         this.drinksearchActive = false;
         this.drinkSelectionLength = 0;
@@ -43,10 +44,10 @@ class CocktailList {
         this.thereIsInput()
         const selection = input.value;
         fetch(url+selection)
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-                console.log(data.drinks.length)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            console.log(data.drinks.length)
                 this.drinksearchActive = true;
                 this.drinkSelectionLength = data.drinks.length;
                 this.drinkName = data.drinks[this.index].strDrink;

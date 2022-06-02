@@ -61,7 +61,7 @@ img{
 body{
   background-image: url(../assets/tinyBar.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   padding: 5em;
   color: white;
 }
