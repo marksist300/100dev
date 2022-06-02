@@ -1,8 +1,50 @@
-/******************************************
-/* CSS
-/*******************************************/
-
-/* Box Model Hack */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 62.5%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 *{
   box-sizing: border-box;
 }
@@ -12,11 +54,42 @@
 /*******************************************/
 img{
   display: block;
-  margin: 0 auto;
   max-height: 25rem;
+  border-radius: 10px;
 }
 
-input:focus{
+body{
+  background-image: url(../assets/tinyBar.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5em;
+  color: white;
+}
+
+h1{
+  font-size: 3rem;
+  padding: 2rem 0;
+}
+
+h2{
+  font-size: 1.8rem;
+  padding: 1.5rem 0;
+}
+
+h3{
+  font-size: 1.3rem;
+  padding-top: .5rem;
+}
+
+input{
+  padding: .5rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  width: 15rem;
+}
+
+input:focus, input:active{
   outline: none;
 }
 
@@ -27,6 +100,27 @@ input::placeholder{
 .warning::placeholder{
   color: red;
 }
-/******************************************
-/* ADDITIONAL STYLES
-/*******************************************/
+
+.buttons-section{
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  width: 15rem;
+}
+
+button{
+  padding: .5rem;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 166, 0, 0.643);
+  background-color:rgb(24, 11, 2);
+  color: white;
+}
+
+button:hover{
+  border: 1px solid rgba(255, 166, 0, 0.845);
+}
+
+button:active{
+  border: 2px solid rgba(255, 166, 0, 0.947);
+}
+

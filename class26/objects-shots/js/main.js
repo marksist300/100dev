@@ -73,7 +73,7 @@ const input = document.querySelector('input');
 // Buttons
 const submitBtn = document.querySelector('.choice-btn');
 const buttons = Array.from(document.querySelectorAll('button'));
-const nameOutput = document.querySelector('h2');
+const nameOutput = document.querySelector('#name-output');
 const instructionsOutput = document.querySelector('p');
 const imgOutput = document.querySelector('img');
 buttons.forEach(btn => btn.addEventListener('click', e => 
@@ -98,9 +98,3 @@ buttons.forEach(btn => btn.addEventListener('click', e =>
 
 
 const cocktailList = new CocktailList(input)
-
-/*
-Input comes in and is checked. If it is an empty string it is flagged with red text
-If there's text it is passed to the next stage, where the buttons are checked. Which button was clicked is tested.
-If it was the submit button the fetch function is triggered and the drink at index zero is diplayed and the search for drinks has started: set searchActive to true.
-While search is true, if prev or next buttons are pushed the cocktail displayed should shuffle up or down respectively.*/
