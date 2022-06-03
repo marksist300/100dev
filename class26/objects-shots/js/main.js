@@ -16,6 +16,7 @@ class CocktailList {
         this.drinksearchActive = false;
         this.drinkSelectionLength = 0;
         this.drinkName = '';
+        this.instructionsTitle = '';
         this.instructions = '';
         this.drinkImage = '';
         this.fetcher(this.input)
@@ -51,7 +52,8 @@ class CocktailList {
                 this.drinksearchActive = true;
                 this.drinkSelectionLength = data.drinks.length;
                 this.drinkName = data.drinks[this.index].strDrink;
-                this.instructions = data.drinks[this.index].strInstructions;
+                this.instructionsTitle = 'Instructions: '
+                this.instructions = data.drinks[this.index].strInstructions
                 this.drinkImage = data.drinks[this.index].strDrinkThumb;
                 this.displayDrink()
             })
@@ -75,6 +77,7 @@ const input = document.querySelector('input');
 const submitBtn = document.querySelector('.choice-btn');
 const buttons = Array.from(document.querySelectorAll('button'));
 const nameOutput = document.querySelector('#name-output');
+const instructionsTitle = document.querySelector('h3');
 const instructionsOutput = document.querySelector('p');
 const imgOutput = document.querySelector('img');
 buttons.forEach(btn => btn.addEventListener('click', e => 
