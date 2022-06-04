@@ -121,36 +121,64 @@ const nameOutput = document.querySelector('#name-output');
 const instructionsTitle = document.querySelector('h3');
 const instructionsOutput = document.querySelector('p');
 const imgOutput = document.querySelector('img');
+let drinkNames = [];
+let drinkImages = [];
+let drinkInstructions = [];
+let drinkArrLength;
+let index = 0;
 
 buttons.forEach(btn=> btn.addEventListener('click', e=>{
-    return retriever()
+    if(e.target.id === 'submit-btn'){
+        retriever();
+    } else if (e.target.id === 'next-btn'){
+        next(drinkArrLength);
+    } else if (e.target.id === 'prev-btn'){
+        prev();
+    }
 }))
+
+function next(ttlNumOfDrinks){
+    if(index < ttlNumOfDrinks){
+        index++
+        console.log(index);
+        displayDrinkData(drinkNames, drinkImages, drinkInstructions, index)
+    } else return;
+}
+
+function prev(){
+    if(index > 0){
+        index--
+        console.log(index)
+        displayDrinkData(drinkNames, drinkImages, drinkInstructions, index)
+    } else return
+}
+
+console.log(index)
+
 
 function retriever(){
     let selection = input.value
     fetch(url + selection)
         .then(res=> res.json())
         .then (data=> {
-            let drinkNames = [];
-            let drinkImages = [];
-            let drinkInstructions = [];
+            drinkArrLength = data.drinks.length-1;
+            console.log(data.drinks)
             data.drinks.forEach(elem=> {
                 drinkNames.push(elem.strDrink)
                 drinkImages.push(elem.strDrinkThumb)
                 drinkInstructions.push(elem.strInstructions)
             });
-            displayDrinkData(drinkNames, drinkImages, drinkInstructions);
+            displayDrinkData(drinkNames, drinkImages, drinkInstructions, index);
         })
         .catch(err=> {
             console.log(`Error: ${err}`)
         })
 }
 
-function displayDrinkData(drinkName, drinkImage, drinkInstructions){
-    let index = 0;
-    nameOutput.innerText = drinkName[index];
-    imgOutput.src = drinkImage[index];
+function displayDrinkData(drinkName, drinkImage, drinkInstructions, index=0){
+    let i = index;
+    nameOutput.innerText = drinkName[i];
+    imgOutput.src = drinkImage[i];
     instructionsTitle.innerText = 'Instructions: ';
-    instructionsOutput.innerText = drinkInstructions[index];
-    console.log(name)
+    instructionsOutput.innerText = drinkInstructions[i];
 }

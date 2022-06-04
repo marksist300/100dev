@@ -57,6 +57,38 @@ img{
   display: block;
   max-height: 25rem;
   border-radius: 10px;
+  border: 1px solid white;
+}
+.carousel{
+  display: relative;
+}
+
+.prev{
+  position: relative;
+  left: .5rem;
+  top: 12.5rem;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 100%;
+  padding: .2rem .5rem;
+  user-select: none;
+}
+
+.next{
+  position: relative;
+  left: 20.85rem;
+  top: 12.5rem;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 100%;
+  padding: .2rem .5rem;
+  user-select: none;
+}
+
+.prev:hover, .next:hover{
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: .3s;
+  cursor: pointer;
 }
 
 body{
