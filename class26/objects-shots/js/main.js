@@ -102,12 +102,18 @@
 
 
 // const cocktailList = new CocktailList(input)
-
+/*
+To take a user input and stor the value.
+To set a function to retreive data.
+take that data, parsed as JSON and search for the user input.value
+To then display a picture of the user's choice of cocktail, as well as its title, instruction for how to make it.
+Retrieve all results as an array of 'n' elements. store all those elements as images in a carousel.
+On clicking to the next image update all the other info (instructions, name etc to represent the image).
+*/
 
 const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=';
 //input received from the user
 const input = document.querySelector('input');
-let selection = input.value;
 // Buttons
 const submitBtn = document.querySelector('.choice-btn');
 const buttons = Array.from(document.querySelectorAll('button'));
@@ -116,14 +122,35 @@ const instructionsTitle = document.querySelector('h3');
 const instructionsOutput = document.querySelector('p');
 const imgOutput = document.querySelector('img');
 
+buttons.forEach(btn=> btn.addEventListener('click', e=>{
+    return retriever()
+}))
 
 function retriever(){
+    let selection = input.value
     fetch(url + selection)
         .then(res=> res.json())
-        .then (data=>{
-            console.log(data)
+        .then (data=> {
+            let drinkNames = [];
+            let drinkImages = [];
+            let drinkInstructions = [];
+            data.drinks.forEach(elem=> {
+                drinkNames.push(elem.strDrink)
+                drinkImages.push(elem.strDrinkThumb)
+                drinkInstructions.push(elem.strInstructions)
+            });
+            displayDrinkData(drinkNames, drinkImages, drinkInstructions);
         })
         .catch(err=> {
             console.log(`Error: ${err}`)
         })
+}
+
+function displayDrinkData(drinkName, drinkImage, drinkInstructions){
+    let index = 0;
+    nameOutput.innerText = drinkName[index];
+    imgOutput.src = drinkImage[index];
+    instructionsTitle.innerText = 'Instructions: ';
+    instructionsOutput.innerText = drinkInstructions[index];
+    console.log(name)
 }
