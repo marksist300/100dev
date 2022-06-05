@@ -72,6 +72,12 @@ h2{
   padding: 1.5rem 0;
 }
 
+.cocktail-name{
+  max-height: 1.8rem;
+  width: 28rem;
+  padding: 2.5rem 0;
+}
+
 h3{
   font-size: 1.3rem;
   padding-top: .5rem;
@@ -99,6 +105,7 @@ input::placeholder{
 
 .noInput{
   visibility: hidden;
+  font-size: 1.1rem;
   padding-top: .2rem;
   padding-bottom: 0;
   color:rgb(253, 251, 251);
@@ -113,7 +120,9 @@ input::placeholder{
   width: 15rem;
 } */
 
-button{
+.select-btn{
+  position: relative;
+  top: -1rem;
   padding: .5rem;
   border-radius: 5px;
   border: 1px solid rgba(255, 166, 0, 0.643);
@@ -121,22 +130,24 @@ button{
   color: white;
 }
 
-button:hover{
+.select-btn:hover{
   border: 1px solid rgba(255, 166, 0, 0.845);
 }
 
-button:active{
+.select-btn:active{
   border: 2px solid rgba(255, 166, 0, 0.947);
 }
 
 img{
   display: block;
-  max-height: 25rem;
+  height: 25rem;
   border-radius: 10px;
   border: 1px solid white;
 }
 .carousel{
-  display: relative;
+  position: relative;
+  visibility: hidden;
+
 }
 
 .prev{

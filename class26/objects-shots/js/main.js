@@ -115,12 +115,15 @@ const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=';
 //input received from the user
 const input = document.querySelector('input');
 // Buttons
-const submitBtn = document.querySelector('.choice-btn');
+const submitBtn = document.querySelector('#submit-btn');
 const buttons = Array.from(document.querySelectorAll('button'));
 const nameOutput = document.querySelector('#name-output');
 const instructionsTitle = document.querySelector('h3');
 const instructionsOutput = document.querySelector('p');
 const imgOutput = document.querySelector('img');
+const carouselBtns = document.querySelector('.carousel');
+const noInputFound = document.querySelector('.noInput');
+// variables that store the api data + index values for DOM rendering
 let selectionActive = false;
 let flaggedNoInput = false;
 let drinkNames = [];
@@ -129,21 +132,25 @@ let drinkInstructions = [];
 let drinkArrLength;
 let index = 0;
 
+input.addEventListener("keypress", event=>{
+    if(event.key === 'Enter'){
+        event.preventDefault();
+        submitBtn.click();
+    }
+})
+
 buttons.forEach(btn=> btn.addEventListener('click', e=>{
 
     if(e.target.id === 'submit-btn' && input.value === ''){
         noInput()
     } else if(e.target.id === 'submit-btn' && selectionActive === false){
         retriever(input.value);
-        console.log('retrieved')
     } else if (e.target.id === 'submit-btn' && selectionActive === true){
         resetAndSearch(input.value)
     } else if (e.target.id === 'nextCarousel' && selectionActive === true){
         next(drinkArrLength);
-        console.log('nope')
     } else if (e.target.id === 'prevCarousel' && selectionActive === true){
         prev(drinkArrLength);
-        console.log('nope')
 
     }
 }))
@@ -180,13 +187,20 @@ function resetAndSearch(newSelection){
     retriever(newSelection);
 }
 
+function nothingFoundInSearch(){
+    noInputFound.innerText = 'No cocktails found'
+    noInputFound.style.visibility = 'visible'
+    flaggedNoInput = true;
+}
+
 function noInput(){
     flaggedNoInput = true;
-    document.querySelector('.noInput').style.visibility = 'visible';
+    noInputFound.innerText = 'Please enter a cocktail name'
+    noInputFound.style.visibility = 'visible';
 }
 
 function inputFound(){
-    document.querySelector('.noInput').style.visibility = 'hidden';
+    noInputFound.style.visibility = 'hidden';
     flaggedNoInput = false;
 }
 
@@ -195,20 +209,24 @@ function retriever(selection){
     fetch(url + selection)
         .then(res=> res.json())
         .then (data=> {
-            drinkArrLength = data.drinks.length-1;
-            console.log(data.drinks)
-            data.drinks.forEach(elem=> {
-                drinkNames.push(elem.strDrink)
-                drinkImages.push(elem.strDrinkThumb)
-                drinkInstructions.push(elem.strInstructions)
-            });
-            displayDrinkData(drinkNames, drinkImages, drinkInstructions, index);
+            if(data.drinks == null) {
+                return nothingFoundInSearch();
+            } else{
+                drinkArrLength = data.drinks.length-1;
+                data.drinks.forEach(elem=> {
+                    drinkNames.push(elem.strDrink)
+                    drinkImages.push(elem.strDrinkThumb)
+                    drinkInstructions.push(elem.strInstructions)
+                });
+                displayDrinkData(drinkNames, drinkImages, drinkInstructions, index);
+            }
         })
         .catch(err=> {
             console.log(`Error: ${err}`)
         })
 }
-function displayDrinkData(drinkName, drinkImage, drinkInstructions, index=0){
+
+function displayDrinkData(drinkName, drinkImage, drinkInstructions, index=0) {
     if(flaggedNoInput === true){
         inputFound();
     }
@@ -216,6 +234,7 @@ function displayDrinkData(drinkName, drinkImage, drinkInstructions, index=0){
     selectionActive = true;
     nameOutput.innerText = drinkName[i];
     imgOutput.src = drinkImage[i];
+    carouselBtns.style.visibility = 'visible';
     instructionsTitle.innerText = 'Instructions: ';
     instructionsOutput.innerText = drinkInstructions[i];
 }
