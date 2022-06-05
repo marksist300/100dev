@@ -121,6 +121,8 @@ const nameOutput = document.querySelector('#name-output');
 const instructionsTitle = document.querySelector('h3');
 const instructionsOutput = document.querySelector('p');
 const imgOutput = document.querySelector('img');
+let selectionActive = false;
+let flaggedNoInput = false;
 let drinkNames = [];
 let drinkImages = [];
 let drinkInstructions = [];
@@ -128,12 +130,21 @@ let drinkArrLength;
 let index = 0;
 
 buttons.forEach(btn=> btn.addEventListener('click', e=>{
-    if(e.target.id === 'submit-btn'){
-        retriever();
-    } else if (e.target.id === 'next-btn'){
+
+    if(e.target.id === 'submit-btn' && input.value === ''){
+        noInput()
+    } else if(e.target.id === 'submit-btn' && selectionActive === false){
+        retriever(input.value);
+        console.log('retrieved')
+    } else if (e.target.id === 'submit-btn' && selectionActive === true){
+        resetAndSearch(input.value)
+    } else if (e.target.id === 'nextCarousel' && selectionActive === true){
         next(drinkArrLength);
-    } else if (e.target.id === 'prev-btn'){
-        prev();
+        console.log('nope')
+    } else if (e.target.id === 'prevCarousel' && selectionActive === true){
+        prev(drinkArrLength);
+        console.log('nope')
+
     }
 }))
 
@@ -142,22 +153,44 @@ function next(ttlNumOfDrinks){
         index++
         console.log(index);
         displayDrinkData(drinkNames, drinkImages, drinkInstructions, index)
-    } else return;
+    } else {
+        index = 0;
+        displayDrinkData(drinkNames, drinkImages, drinkInstructions, index)
+    }
 }
 
-function prev(){
+function prev(ttlNumOfDrinks){
     if(index > 0){
         index--
         console.log(index)
         displayDrinkData(drinkNames, drinkImages, drinkInstructions, index)
-    } else return
+    } else {
+        index = ttlNumOfDrinks;
+        displayDrinkData(drinkNames, drinkImages, drinkInstructions, index)
+    }
 }
 
-console.log(index)
+function resetAndSearch(newSelection){
+    selectionActive = false;
+    drinkNames = [];
+    drinkImages = [];
+    drinkInstructions = [];
+    drinkArrLength = 0;
+    index = 0;
+    retriever(newSelection);
+}
+
+function noInput(){
+    flaggedNoInput = true;
+    document.querySelector('.noInput').style.visibility = 'visible';
+}
+
+function inputFound(){
+    document.querySelector('.noInput').style.visibility = 'hidden';
+}
 
 
-function retriever(){
-    let selection = input.value
+function retriever(selection){
     fetch(url + selection)
         .then(res=> res.json())
         .then (data=> {
@@ -174,9 +207,13 @@ function retriever(){
             console.log(`Error: ${err}`)
         })
 }
-
+console.log(flaggedNoInput)
 function displayDrinkData(drinkName, drinkImage, drinkInstructions, index=0){
+    if(flaggedNoInput === true){
+        inputFound();
+    }
     let i = index;
+    selectionActive = true;
     nameOutput.innerText = drinkName[i];
     imgOutput.src = drinkImage[i];
     instructionsTitle.innerText = 'Instructions: ';
