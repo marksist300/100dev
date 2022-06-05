@@ -187,6 +187,7 @@ function noInput(){
 
 function inputFound(){
     document.querySelector('.noInput').style.visibility = 'hidden';
+    flaggedNoInput = false;
 }
 
 
@@ -207,7 +208,6 @@ function retriever(selection){
             console.log(`Error: ${err}`)
         })
 }
-console.log(flaggedNoInput)
 function displayDrinkData(drinkName, drinkImage, drinkInstructions, index=0){
     if(flaggedNoInput === true){
         inputFound();
