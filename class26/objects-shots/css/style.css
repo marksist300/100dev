@@ -180,3 +180,10 @@ img{
   cursor: pointer;
   border: 1px solid white;
 }
+ul{
+  padding-bottom: 1rem;
+}
+
+li{
+  padding: .5rem 0;
+}

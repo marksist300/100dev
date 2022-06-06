@@ -123,12 +123,15 @@ const instructionsOutput = document.querySelector('p');
 const imgOutput = document.querySelector('img');
 const carouselBtns = document.querySelector('.carousel');
 const noInputFound = document.querySelector('.noInput');
+const ingredientSection = document.querySelector('.ingredients-section')
 // variables that store the api data + index values for DOM rendering
+let drinkData;
 let selectionActive = false;
 let flaggedNoInput = false;
 let drinkNames = [];
 let drinkImages = [];
 let drinkInstructions = [];
+let ingrdientsList = [];
 let drinkArrLength;
 let index = 0;
 
@@ -209,21 +212,33 @@ function retriever(selection){
     fetch(url + selection)
         .then(res=> res.json())
         .then (data=> {
-            if(data.drinks == null) {
+            drinkData = data.drinks;
+            if(drinkData == null) {
                 return nothingFoundInSearch();
             } else{
-                drinkArrLength = data.drinks.length-1;
-                data.drinks.forEach(elem=> {
+                drinkArrLength = drinkData.length-1;
+                drinkData.forEach(elem=> {
                     drinkNames.push(elem.strDrink)
                     drinkImages.push(elem.strDrinkThumb)
                     drinkInstructions.push(elem.strInstructions)
                 });
-                displayDrinkData(drinkNames, drinkImages, drinkInstructions, index);
+                ingredientsRetriever(index);
             }
+            displayDrinkData(drinkNames, drinkImages, drinkInstructions, index);
         })
         .catch(err=> {
             console.log(`Error: ${err}`)
         })
+}
+
+function ingredientsRetriever(index){
+    let value = 1;
+    let result;
+    while(result !== null){
+        result = drinkData[index][`strIngredient${value}`];
+        if(result !== null) ingrdientsList.push(result)
+        value++;
+    }
 }
 
 function displayDrinkData(drinkName, drinkImage, drinkInstructions, index=0) {
@@ -237,4 +252,10 @@ function displayDrinkData(drinkName, drinkImage, drinkInstructions, index=0) {
     carouselBtns.style.visibility = 'visible';
     instructionsTitle.innerText = 'Instructions: ';
     instructionsOutput.innerText = drinkInstructions[i];
+    ingrdientsList.map(ingredient=> {
+        let substance = document.createElement('li')
+        let item = document.createTextNode(ingredient)
+        substance.appendChild(item)
+        ingredientSection.appendChild(substance)
+    })
 }
