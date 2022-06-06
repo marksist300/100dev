@@ -181,9 +181,12 @@ img{
   border: 1px solid white;
 }
 ul{
-  padding-bottom: 1rem;
+  padding-bottom: .5rem;
 }
 
 li{
-  padding: .5rem 0;
+  padding: .2rem 0;
+}
+p{
+  line-height: 1rem;
 }

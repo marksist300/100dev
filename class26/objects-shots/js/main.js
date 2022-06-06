@@ -123,7 +123,6 @@ function ingredientReset(index){
     while (ingredientSection.hasChildNodes()) {
         ingredientSection.removeChild(ingredientSection.firstChild);
     }
-    console.log(ingredientSection.firstChild)
 
     ingredientsRetriever(index);
 }
