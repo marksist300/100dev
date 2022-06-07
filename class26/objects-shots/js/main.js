@@ -50,7 +50,6 @@ buttons.forEach(btn=> btn.addEventListener('click', e=>{
 function next(ttlNumOfDrinks){
     if(index < ttlNumOfDrinks){
         index++
-        console.log(index);
         displayDrinkData(drinkNames, drinkImages, drinkInstructions, index)
     } else {
         index = 0;
@@ -61,7 +60,6 @@ function next(ttlNumOfDrinks){
 function prev(ttlNumOfDrinks){
     if(index > 0){
         index--
-        console.log(index)
         displayDrinkData(drinkNames, drinkImages, drinkInstructions, index)
     } else {
         index = ttlNumOfDrinks;
@@ -102,7 +100,6 @@ function retriever(selection){
         .then(res=> res.json())
         .then (data=> {
             drinkData = data.drinks;
-            console.log(drinkData)
             if(drinkData == null) {
                 return nothingFoundInSearch();
             } else{
