@@ -180,6 +180,10 @@ img{
   cursor: pointer;
   border: 1px solid white;
 }
+
+.drink-description{
+  max-height: 20rem;
+}
 ul{
   padding-bottom: .5rem;
 }

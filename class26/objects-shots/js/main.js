@@ -5,12 +5,13 @@ const input = document.querySelector('input');
 const submitBtn = document.querySelector('#submit-btn');
 const buttons = Array.from(document.querySelectorAll('button'));
 const nameOutput = document.querySelector('#name-output');
-const instructionsTitle = document.querySelector('h3');
+const ingredientSection = document.querySelector('.ingredients-section')
+const ingredientsTitle = document.querySelector('.ingredients-title')
+const instructionsTitle = document.querySelector('.instructions-title');
 const instructionsOutput = document.querySelector('p');
 const imgOutput = document.querySelector('img');
 const carouselBtns = document.querySelector('.carousel');
 const noInputFound = document.querySelector('.noInput');
-const ingredientSection = document.querySelector('.ingredients-section')
 
 // variables that store the api data + index values for DOM rendering
 let drinkData;
@@ -101,6 +102,7 @@ function retriever(selection){
         .then(res=> res.json())
         .then (data=> {
             drinkData = data.drinks;
+            console.log(drinkData)
             if(drinkData == null) {
                 return nothingFoundInSearch();
             } else{
@@ -132,11 +134,20 @@ function ingredientsRetriever(index){
         ingredientReset(index)
     } else{
     let value = 1;
-    let result;
-    while(result !== null){
-        result = drinkData[index][`strIngredient${value}`];
-        if(result !== null) ingrdientsList.push(result)
-        value++;
+    let cocktailIngredient;
+    let measure;
+    while(cocktailIngredient !== null && cocktailIngredient !== ''){
+            measure = drinkData[index][`strMeasure${value}`];
+            cocktailIngredient = drinkData[index][`strIngredient${value}`];
+            if(measure !== null && measure !== ''){
+                ingrdientsList.push(`${measure} :   ${cocktailIngredient}`)
+                value++;
+            } else if (cocktailIngredient !== null || cocktailIngredient === ''){
+            console.log(measure)
+            cocktailIngredient = drinkData[index][`strIngredient${value}`];
+            ingrdientsList.push(cocktailIngredient)
+            value++;
+            } 
     }
     ingredientsDisplay();
   }
@@ -160,6 +171,7 @@ function displayDrinkData(drinkName, drinkImage, drinkInstructions, index=0) {
     nameOutput.innerText = drinkName[i];
     imgOutput.src = drinkImage[i];
     carouselBtns.style.visibility = 'visible';
+    ingredientsTitle.innerText = 'Ingredients: ';
     instructionsTitle.innerText = 'Instructions: ';
     instructionsOutput.innerText = drinkInstructions[i];
     ingredientsRetriever(index)
