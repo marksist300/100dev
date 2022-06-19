@@ -10,8 +10,9 @@ class PlayerSelection{
 
 const player1Naughts = new PlayerSelection('O', true);
 const player2Crosses = new PlayerSelection('X', false);
-const playerToggle = Array.from(document.querySelectorAll('.toggleSwitch'))
+const playerToggle = Array.from(document.querySelectorAll('.player-selector'))
 const squares = Array.from(document.querySelectorAll('.square'));
+console.log(playerToggle)
 
 function switchPlayer(){
     if(player1Naughts.playersTurn === true){
@@ -27,17 +28,7 @@ function switchPlayer(){
     }   
 }
 
-playerToggle.forEach(item=> item.addEventListener('change', e=>{
-    if(e.target.checked === true && e.target.id === 'p1Toggle'){
-        switchPlayer()
-        console.log('p1',player1Naughts.playersTurn)
-        console.log('p2',player2Crosses.playersTurn)
-    } else if (e.target.checked === true && e.target.id === 'p2Toggle'){
-        switchPlayer()
-        console.log('p1',player1Naughts.playersTurn)
-        console.log('p2',player2Crosses.playersTurn)
-    }
-}))
+playerToggle.forEach(item=> item.addEventListener('click', switchPlayer))
 
 squares.forEach(elem=> elem.addEventListener('click', e=>{
     console.log(e.target.id)
