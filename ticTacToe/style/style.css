@@ -17,6 +17,7 @@ time, mark, audio, video {
 	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
+	font-family: 'Poppins', sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -71,7 +72,7 @@ table {
 	cursor: pointer;
 	top: .2rem;
 	bottom: 0;
-	left: 6rem;
+	left: 6.5rem;
 	right: 0;
 	height: 1.5rem;
 	background-color: #ccc;
