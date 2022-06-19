@@ -64,6 +64,7 @@ table {
 	width: 0;
 	height: 0;
 }
+
 /*Slider style*/
 .slider{
 	position: absolute;
@@ -110,7 +111,7 @@ table {
 	border-radius: 50%;
   }
 
-
+/*Game boxes and container setup*/
 .game-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
