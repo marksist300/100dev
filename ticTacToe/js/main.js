@@ -12,7 +12,6 @@ const player1Naughts = new PlayerSelection('O', true);
 const player2Crosses = new PlayerSelection('X', false);
 const playerToggle = Array.from(document.querySelectorAll('.player-selector'))
 const squares = Array.from(document.querySelectorAll('.square'));
-console.log(playerToggle)
 
 function switchPlayer(){
     if(player1Naughts.playersTurn === true){
@@ -31,21 +30,14 @@ function switchPlayer(){
 playerToggle.forEach(item=> item.addEventListener('click', switchPlayer))
 
 squares.forEach(elem=> elem.addEventListener('click', e=>{
-    console.log(e.target.id)
     playerToggle.forEach(player=> {
         if(e.target.innerText !== ''){
             return;
         } else if(player1Naughts.playersTurn === true ){
             e.target.innerText = player1Naughts.type;
-            console.log(player1Naughts.type)
-            console.log('p1',player1Naughts.playersTurn)
-            console.log('p2',player2Crosses.playersTurn)
             switchPlayer()
         } else if(player2Crosses.playersTurn === true){
-            console.log(e.target)
             e.target.innerText = player2Crosses.type;
-            console.log('p1',player1Naughts.playersTurn)
-            console.log('p2',player2Crosses.playersTurn)
             switchPlayer()
         }
     });
