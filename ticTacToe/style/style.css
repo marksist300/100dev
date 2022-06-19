@@ -45,8 +45,13 @@ table {
     box-sizing: border-box;
 }
 
+/*setting up the toggle buttons*/
 .player-selection{
-	padding:1rem;
+	display: flex;
+	flex-flow: column nowrap;
+	text-align: justify;
+	justify-content: flex-end;
+	padding: 1rem;
 }
 
 .player-selector{
@@ -59,17 +64,19 @@ table {
 	width: 0;
 	height: 0;
 }
+/*Slider style*/
 .slider{
 	position: absolute;
 	cursor: pointer;
-	top: 0;
-	bottom: -2rem;
+	top: .2rem;
+	bottom: 0;
 	left: 6rem;
 	right: 0;
 	height: 1.5rem;
 	background-color: #ccc;
 	transition: .2s;
 	width: 3.1rem;
+
 }
 .slider:before {
 	position: absolute;
@@ -103,12 +110,6 @@ table {
 	border-radius: 50%;
   }
 
-.player-selection{
-	display: flex;
-	flex-flow: column nowrap;
-	text-align: justify;
-	padding: 1rem .5rem;
-}
 
 .game-container{
     display: grid;
