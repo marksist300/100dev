@@ -145,12 +145,16 @@
 // getACuteDogPhoto()
 
 
-// async function getRandomCocktail(){
-//     const url = 'https://www.thecocktaildb.com/api/json/v1/1/random.php';
-//     const response = await fetch(url);
-//     const data = await response.json();
-//     console.log(data)
-// }
+async function getRandomCocktail(){
+    try{
+        const url = 'https://www.thecocktaildb.com/api/json/v1/1/random.php';
+        const response = await fetch(url);
+        const data = await response.json();
+        console.log(data)
+    } catch(err){
+        console.log(`Errors: ${err}`)
+    }
+}
 
 // getRandomCocktail();
 
