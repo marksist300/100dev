@@ -17,10 +17,11 @@
 //     console.log('Paper delivered to house 1')
 // }
 // function houseTwo(){
-//     setTimeout(() => console.log('Paper delivered to house 2'), 3000)
+//     setTimeout(() => console.log('Paper delivered to house 2'), 0)
 // }
 // function houseThree(){
-//     console.log('Paper delivered to house 3')
+//     setTimeout(() => console.log('Paper delivered to house 3'), 0)
+
 // }
 // houseOne()
 // houseTwo()
@@ -144,12 +145,12 @@
 // getACuteDogPhoto()
 
 
-async function getRandomCocktail(){
-    const url = 'https://www.thecocktaildb.com/api/json/v1/1/random.php';
-    const response = await fetch(url);
-    const data = await response.json();
-    console.log(data)
-}
+// async function getRandomCocktail(){
+//     const url = 'https://www.thecocktaildb.com/api/json/v1/1/random.php';
+//     const response = await fetch(url);
+//     const data = await response.json();
+//     console.log(data)
+// }
 
-getRandomCocktail();
+// getRandomCocktail();
 
