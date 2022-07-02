@@ -10,4 +10,8 @@ async function makeReq(){
   document.querySelector("#personName").textContent = data.name
   document.querySelector("#personStatus").textContent = data.status
   document.querySelector("#personOccupation").textContent = data.currentOccupation
+
+  if(userName === 'flip'){
+    document.querySelector("#personOccupation").textContent = ''
+  }
 }

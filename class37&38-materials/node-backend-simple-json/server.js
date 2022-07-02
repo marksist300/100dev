@@ -5,8 +5,8 @@ const querystring = require('querystring');
 const figlet = require('figlet')
 
 const server = http.createServer((req, res) => {
-  const page = url.parse(req.url).pathname;
-  const params = querystring.parse(url.parse(req.url).query);
+  const page = url.parse(req.url).pathname; //How we access the path from the URL
+  const params = querystring.parse(url.parse(req.url).query); // How we access the query parameters in the url.
   console.log(page);
   if (page == '/') {
     fs.readFile('index.html', function(err, data) {
@@ -40,6 +40,15 @@ const server = http.createServer((req, res) => {
         }
         res.end(JSON.stringify(objToJson));
       }//student = leon
+      else if (params['student'] == 'flip'){
+        res.writeHead(200, {'Content-Type': 'application/json'});
+        let coinFlip = Math.round(Math.random()+1) == 1? 'Heads': 'Tails';
+        const objToJson = {
+          name: 'Coin flipper',
+          status: `${coinFlip}`
+        }
+        res.end(JSON.stringify(objToJson));
+      }
       else if(params['student'] != 'leon'){
         res.writeHead(200, {'Content-Type': 'application/json'});
         const objToJson = {
