@@ -13,18 +13,18 @@
 // houseThree()
 
 //Code 02
-function houseOne(){
-    console.log('Paper delivered to house 1')
-}
-function houseTwo(){
-    setTimeout(() => console.log('Paper delivered to house 2'), 0)
-}
-function houseThree(){
-    console.log('Paper delivered to house 3')
-}
-houseOne()
-houseTwo()
-houseThree()
+// function houseOne(){
+//     console.log('Paper delivered to house 1')
+// }
+// function houseTwo(){
+//     setTimeout(() => console.log('Paper delivered to house 2'), 0)
+// }
+// function houseThree(){
+//     console.log('Paper delivered to house 3')
+// }
+// houseOne()
+// houseTwo()
+// houseThree()
 
 //Code 03
 // function houseOne(){
@@ -142,3 +142,11 @@ houseThree()
 // }
 // getACuteDogPhoto()
 
+async function makeARequestToAnAPI(url){
+    const res = await fetch(url);
+    const data = await res.json();
+    document.querySelector('img').src = data.message
+    console.log(data.message)
+}
+
+makeARequestToAnAPI('https://dog.ceo/api/breeds/image/random')
