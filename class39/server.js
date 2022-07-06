@@ -10,9 +10,9 @@ app.get("/", (req,res)=>{
 
 app.get("/api/:name", (req,res) => {
     let superHeroName = req.params.name[0].toUpperCase() + req.params.name.slice(1).toLowerCase();
-    console.log(superHero);
-    let heroInJson = JSON.stringify(HERO_DATA[superHero]);
-    if(HERO_DATA[superHero]){
+    console.log(superHeroName);
+    let heroInJson = JSON.stringify(HERO_DATA[superHeroName]);
+    if(HERO_DATA[superHeroName]){
         res.send(heroInJson)
     }
     else{
@@ -22,8 +22,8 @@ app.get("/api/:name", (req,res) => {
                 return;
             }
             res.write(data);
-            res.end;
-        })
+            res.end();
+        });
     }
 
 })
