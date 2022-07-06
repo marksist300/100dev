@@ -1,0 +1,8 @@
+{
+    "batman": {
+        "Name": "Bruce Wayne",
+        "City": "Gotham City",
+        "Age": "33",
+        "Powers": ["Money", "Genius Intelligence"]
+    }
+}
