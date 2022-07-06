@@ -4,5 +4,26 @@
         "City": "Gotham City",
         "Age": "33",
         "Powers": ["Money", "Genius Intelligence"]
+    },
+
+    "superman": {
+        "Name": "Clark Kent",
+        "City": "Metropolis",
+        "Age": "33",
+        "Powers": ["Super Strength", "Ability to Fly", "X-Ray Vision", "Laser Eyes"]
+    },
+
+    "spiderman": {
+        "Name": "Peter Parker",
+        "City": "New York City",
+        "Age": "18",
+        "Powers": ["Super Strength", "Spider Sense", "Flexibility", "Shoots Web from Hands"]
+    },
+
+    "Wolverine": {
+        "Name": "James Howlett",
+        "City": "Alberta, Canada",
+        "Age": "???",
+        "Powers": ["Super Strength", "Rage", "Super Healing Ability", "Adamantium Skeleton and Claws"]
     }
 }
