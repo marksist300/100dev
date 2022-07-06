@@ -1,19 +1,19 @@
 {
-    "batman": {
+    "Batman": {
         "Name": "Bruce Wayne",
         "City": "Gotham City",
         "Age": "33",
         "Powers": ["Money", "Genius Intelligence"]
     },
 
-    "superman": {
+    "Superman": {
         "Name": "Clark Kent",
         "City": "Metropolis",
         "Age": "33",
         "Powers": ["Super Strength", "Ability to Fly", "X-Ray Vision", "Laser Eyes"]
     },
 
-    "spiderman": {
+    "Spiderman": {
         "Name": "Peter Parker",
         "City": "New York City",
         "Age": "18",
