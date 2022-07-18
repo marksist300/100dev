@@ -1,0 +1,29 @@
+{
+    "Batman":{
+        "Name": "Bruce Wayne",
+        "From": "Gotham City",
+        "Age": 37,
+        "Super Powers": ["Incredible Wealth", "Gadgets", "Genius Intelligence", "Fighting Abilities"]
+    },
+
+    "Wolverine":{
+        "Name": "James Howlett",
+        "From": "Alberta, Canada",
+        "Age": "?",
+        "Super Powers": ["Super Strength", "Adamantium Skeleton", "Claws", "Rage", "Rapid Healing"]
+    },
+
+    "Spiderman":{
+        "Name": "Peter Parker",
+        "From": "New York City",
+        "Age": 18,
+        "Super Powers": ["Strength", "Flexibility", "Spider Sense", "Web Shooting"]
+    },
+
+    "Superman":{
+        "Name": "Clark Kent",
+        "From": "Krypton",
+        "Age": "?",
+        "Super Powers": ["Super Strength", "Flight", "X-Ray Vision", "Shoot Lasers From His Eyes"]
+    }
+}
